@@ -4,7 +4,11 @@
   padding: 2rem;
   text-align: center;
 }
-
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 .logo {
   height: 6em;
   padding: 1.5em;
@@ -39,4 +43,116 @@
 
 .read-the-docs {
   color: #888;
+}
+
+.link{
+  width: 100%;
+  margin-top: 1em;
+  padding: .5em 1em;
+  color: white;
+  border: 2px solid white;
+  border-radius: 5px;
+  
+  display: block;
+  transition: 0.2s;
+
+  &:hover{
+    border-color: rgb(69, 69, 230);
+    color: white;
+  }
+  &.green:hover{
+    border-color: #4cbe00;
+  }
+  &.yellow:hover{
+    border-color: #ffc400;
+  }
+  &.red:hover{
+    border-color: #dc0000;
+  }
+}
+
+.ball{
+  background-color: #00000033;
+  border-radius: 10px;
+  padding: 1em;
+  list-style: none;
+}
+
+fieldset{
+  border-radius: 5px;
+  border-style: solid;
+  text-align: start;
+}
+
+.mt{
+  margin-top: 1em;
+}
+.mb{
+  margin-bottom: 1em;
+}
+.ml{
+  margin-left: 1em;
+}
+.mb-0{
+  margin-bottom: 0;
+}
+.d-flex{
+  display: flex;
+  justify-content: space-around;
+}
+.t-s{
+  text-align: start;
+}
+
+.bb{
+  border-bottom: 2px solid white;
+}
+.noBorder{
+  border: 0;
+}
+
+table{
+  width: 100%;
+  border: 2px solid;
+  border-radius: 10px;
+  border-spacing: 0;
+}
+td, th {
+  border-left: 1px solid;
+  padding: 10px;
+  &:first-child{
+    border-left: none;
+  }
+}
+th{
+  border-bottom: 2px solid;
+}
+ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.listLi{
+  padding: .5em 0;
+  width: 100%;
+  transition: .2s;
+  font-size: 1.5em;
+  margin-bottom: 5px;
+}
+
+.input{
+  width: 100%;
+  padding: .5em 1em;
+  color: white;
+  border: 2px solid white;
+  border-radius: 5px;
+  
+  display: block;
+  transition: 0.2s;
+
+  &:focus{
+    border-color: rgb(235, 90, 0);
+    color: white;
+  }
 }
