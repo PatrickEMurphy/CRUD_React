@@ -16,6 +16,7 @@ export default function Daw2() {
             })
             }
         </ul>
+        <Link className='link' to={`/daw2/add`}>Añadir alumno</Link>
     </>
   )
 }
