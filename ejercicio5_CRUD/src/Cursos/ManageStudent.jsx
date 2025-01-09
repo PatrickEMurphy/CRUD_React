@@ -30,7 +30,7 @@ export default function ManageStudent() {
   }, [id, isEditing, alumnos]);
 
   // Manejar los cambios en los campos del formulario
-  function handleChange(e) {
+  function manejarChange(e) {
     const { name, value } = e.target;
 
     // Validar si el ID ya existe
@@ -56,7 +56,7 @@ export default function ManageStudent() {
   }
 
   // Cuando se envía se ejecutan las funciones dependiendo si se edita o ase añade
-  function handleSubmit(e) {
+  function manejarSubmit(e) {
     e.preventDefault();
 
     const newErrors = {};
@@ -85,7 +85,7 @@ export default function ManageStudent() {
   return (
     <>
       <h2>{isEditing ? "Editar Alumno" : "Añadir Alumno"}</h2>
-      <form onSubmit={handleSubmit} noValidate>
+      <form onSubmit={manejarSubmit} noValidate>
         <div className="mt">
           <label htmlFor="id">ID</label>
           <input
@@ -95,7 +95,7 @@ export default function ManageStudent() {
             className="input"
             value={form.id}
             placeholder="Id"
-            onChange={handleChange}
+            onChange={manejarChange}
             required
             disabled={isEditing} // Deshabilitar el ID si estamos editando
           />
@@ -111,14 +111,14 @@ export default function ManageStudent() {
             className="input"
             value={form.nombre}
             placeholder="Nombre"
-            onChange={handleChange} // Cambiamos el estado si se cambia
+            onChange={manejarChange} // Cambiamos el estado si se cambia
             required
           />
           {errors.nombre && <p className="error">{errors.nombre}</p>}
         </div>
         <div className="mt">
           <label htmlFor="grupo">Grupo</label>
-          <select id="grupo" name="grupo" className="input" value={form.grupo} onChange={handleChange} required>
+          <select id="grupo" name="grupo" className="input" value={form.grupo} onChange={manejarChange} required>
             <option value="" disabled>
               Selecciona un grupo
             </option>
