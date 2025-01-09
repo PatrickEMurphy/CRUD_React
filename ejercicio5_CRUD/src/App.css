@@ -63,6 +63,9 @@
   &.green:hover{
     border-color: #4cbe00;
   }
+  &.orange{
+    border-color: #ff5e00;
+  }
   &.yellow:hover{
     border-color: #ffc400;
   }
@@ -155,4 +158,43 @@ ul{
     border-color: rgb(235, 90, 0);
     color: white;
   }
+}
+
+.tablaGrupo{
+  font-size: 1em;
+  
+  border: none;
+  th, td{
+    border-left: none;
+  }
+  td:first-child{
+    border-right: 2px solid;
+  }
+  .edit{
+    color: #ffc400;
+    transition: .15s;
+  }
+  .edit:hover{
+    color:#00ca58;
+  }
+  .delete{
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    color: #dc0000;
+    transition: .15s;
+  }
+  .delete:hover{
+    color:#00a5ca;
+  }
+}
+
+.nb{
+  border: none !important
+}
+
+.error {
+  color: red;
+  font-size: 0.9em;
+  margin-top: 5px;
 }

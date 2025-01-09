@@ -9,8 +9,8 @@ export default function Grupo() {
 
   return (
     <>
-        <h3 className='mb'>Alumnos del curso 2º DAW {letra}</h3>
-        <table>
+        <h2 className='mb'>Alumnos del curso 2º DAW {letra}</h2>
+        <table className='tablaGrupo'>
             <thead>
                 <tr>
                     <th>Alumno</th>
@@ -19,14 +19,24 @@ export default function Grupo() {
                 </tr>
             </thead>
             <tbody>
-                {    
-                    alumnos.filter(alumno => 
-                        alumno.grupo == letra
-                    ).map((alumno, i) =>
-                        <tr key={i} className='listLi'>
+                {   // Si no hay alumnos muestra un mensaje de no hay alumnos
+                    alumnos.filter(alumno => alumno.grupo === letra).length > 0 ? (
+                        alumnos
+                        .filter(alumno => alumno.grupo === letra)
+                        .map((alumno, i) => (
+                            <tr key={i} className="listLi">
                             <td>{alumno.nombre}</td>
-                            <td><Link to={`/daw2/edit/${alumno.id}`}>Editar</Link></td>
-                            <td><button onClick={() => deleteAlumno(alumno.id)}>Eliminar</button></td>
+                            <td>
+                                <Link className="edit" to={`/daw2/edit/${alumno.id}`}>Editar</Link>
+                            </td>
+                            <td>
+                                <button className="delete" onClick={() => deleteAlumno(alumno.id)}>Eliminar</button>
+                            </td>
+                            </tr>
+                        ))
+                    ) : (
+                        <tr>
+                            <td colSpan="3" className='nb'>No hay alumnos en este grupo.</td>
                         </tr>
                     )
                 }
