@@ -8,9 +8,17 @@ import Inicio from './inicio.jsx'
 import Layoutlet from './Layoutlet.jsx'
 import Daw2 from './Cursos/Daw2.jsx'
 import Grupo from './Cursos/Grupo.jsx'
-import AddStudent from './Cursos/AddStudent.jsx'
-import EditStudent from './Cursos/EditStudent.jsx'
-import DeleteStudent from './Cursos/DeleteStudent.jsx'
+import ManageStudent from './Cursos/ManageStudent.jsx'
+
+
+
+export const alumnos = [
+  {id: 1, grupo: "A", nombre: "Juan"},
+  {id: 2, grupo: "A", nombre: "Wan"},
+  {id: 3, grupo: "B", nombre: "Cain"},
+  {id: 4, grupo: "B", nombre: "Pedro"},
+  {id: 5, grupo: "B", nombre: "Eva"},
+]
 
 createRoot(document.getElementById('root')).render(
   <BrowserRouter>
@@ -22,9 +30,8 @@ createRoot(document.getElementById('root')).render(
         <Route path='/curso' element={<Curso/>}></Route>
         <Route path='/daw2' element={<Daw2/>}></Route>
         <Route path='/grupo/:letra' element={<Grupo/>}></Route>
-        <Route path='/daw2/add' element={<AddStudent/>}></Route>
-        <Route path='/daw2/edit/:id' element={<EditStudent/>}></Route>
-        <Route path='/daw2/delete/:id' element={<DeleteStudent/>}></Route>
+        <Route path="/daw2/add" element={<ManageStudent />} />
+        <Route path="/daw2/edit/:id" element={<ManageStudent />} />
         <Route path='*' element={<Navigate to="/" replace="true"/>}></Route>
       </Route>
     </Routes>
