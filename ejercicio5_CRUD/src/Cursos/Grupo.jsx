@@ -13,6 +13,7 @@ export default function Grupo() {
         <table>
             <thead>
                 <tr>
+                    <th>Id</th>
                     <th>Alumno</th>
                     <th></th>
                     <th></th>
@@ -24,9 +25,10 @@ export default function Grupo() {
                         alumno.grupo == letra
                     ).map((alumno, i) =>
                         <tr key={i} className='listLi'>
+                            <td>{alumno.id}</td>
                             <td>{alumno.nombre}</td>
                             <td><Link to={`/daw2/edit/${alumno.id}`}>Editar</Link></td>
-                            <td><button onClick={() => deleteAlumno(alumno.id)}>Eliminar</button></td>
+                            <td><Link onClick={() => deleteAlumno(alumno.id)}>Eliminar</Link></td>
                         </tr>
                     )
                 }
