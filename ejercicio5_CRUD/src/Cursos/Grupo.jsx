@@ -9,8 +9,8 @@ export default function Grupo() {
 
   return (
     <>
-        <h3 className='mb'>Alumnos del curso 2º DAW {letra}</h3>
-        <table>
+        <h2 className='mb'>Alumnos del curso 2º DAW {letra}</h2>
+        <table className='tablaGrupo'>
             <thead>
                 <tr>
                     <th>Id</th>

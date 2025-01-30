@@ -29,10 +29,11 @@ export default function Layoutlet() {
 
   return (
     <main>
-        <nav>
+        <nav className='mb'>
             <Link to={'/'}>Inicio | </Link>
             <Link to={'/centro'}>Centro | </Link>
-            <Link to={'/daw2'}>2º DAW</Link>
+            <Link to={'/daw2'}>2º DAW | </Link>
+            <Link to={'/daw2/add'}>Añadir alumno</Link>
         </nav>
         <div>
             <Outlet context={{ alumnos, addAlumno, editAlumno, deleteAlumno }} />

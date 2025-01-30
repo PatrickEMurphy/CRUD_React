@@ -9,7 +9,7 @@ export default function inicio() {
             <button className='link' onClick={(e) => navegar('/centro')}>Centro</button>
             <button className='link' onClick={(e) => navegar('/ciclo')}>Ciclo</button>
             <button className='link' onClick={(e) => navegar('/curso')}>Curso</button>
-            <button className='link green' onClick={(e) => navegar('/daw2')}>2º DAW</button>
+            <button className='link green orange' onClick={(e) => navegar('/daw2')}>2º DAW</button>
         </>
     )
 }
